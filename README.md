@@ -28,9 +28,10 @@ This repository contains all components necessary for synthesizing and using thi
 
 3. To run the provided block design example, execute the TCL script located in `./tb` within Vivado.
  
-**Table 1**  - The generic parameters used to configure the IP core.
 
 <div align="center">
+
+**Table 1**  - The generic parameters used to configure the IP core.
 
 | Generic Name        | Description                         | Default Value  |
 |---------------------|-------------------------------------|----------------|
@@ -42,24 +43,6 @@ This repository contains all components necessary for synthesizing and using thi
 | `C_TX_CLOCK_FREQ`   | Transmitter clock frequency         | 100_000_000    |
 | `C_TX_DATA_BITS`    | Transmitter number of data bits     | 8              |
 | `C_TX_FIFO_DEPTH`   | Transmitter FIFO buffer depth       | 16             |
-
-</div>
-
-The IP core is depicted in  while the example loopback design is depicted in **Figure 2**.
-
-**Figure 1** - The IP core in Vivado Block Design.
-
-<div align="center">
-
-![logo](img/fig_1.png)
-
-</div>
-
-**Figure 2** The loopback example block design in Vivado.
-
-<div align="center">
-
-![logo](img/fig_2.png)
 
 </div>
 
