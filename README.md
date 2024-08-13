@@ -32,16 +32,16 @@ This repository contains all components necessary for synthesizing and using thi
 
 <div align="center">
 
-    | Generic Name        | Description                         | Default Value  |
-    |---------------------|-------------------------------------|----------------|
-    | `C_RX_BAUDRATE`     | Receiver baud rate value            | 115_200        |
-    | `C_RX_CLOCK_FREQ`   | Receiver clock frequency            | 100_000_000    |
-    | `C_RX_DATA_BITS`    | Receiver number of data bits        | 8              |
-    | `C_RX_FIFO_DEPTH`   | Receiver FIFO buffer depth          | 16             |
-    | `C_TX_BAUDRATE`     | Transmitter baud rate value         | 115_200        |
-    | `C_TX_CLOCK_FREQ`   | Transmitter clock frequency         | 100_000_000    |
-    | `C_TX_DATA_BITS`    | Transmitter number of data bits     | 8              |
-    | `C_TX_FIFO_DEPTH`   | Transmitter FIFO buffer depth       | 16             |
+| Generic Name        | Description                         | Default Value  |
+|---------------------|-------------------------------------|----------------|
+| `C_RX_BAUDRATE`     | Receiver baud rate value            | 115_200        |
+| `C_RX_CLOCK_FREQ`   | Receiver clock frequency            | 100_000_000    |
+| `C_RX_DATA_BITS`    | Receiver number of data bits        | 8              |
+| `C_RX_FIFO_DEPTH`   | Receiver FIFO buffer depth          | 16             |
+| `C_TX_BAUDRATE`     | Transmitter baud rate value         | 115_200        |
+| `C_TX_CLOCK_FREQ`   | Transmitter clock frequency         | 100_000_000    |
+| `C_TX_DATA_BITS`    | Transmitter number of data bits     | 8              |
+| `C_TX_FIFO_DEPTH`   | Transmitter FIFO buffer depth       | 16             |
 
 </div>
 
@@ -51,7 +51,7 @@ The IP core is depicted in  while the example loopback design is depicted in **F
 
 <div align="center">
 
-    ![logo](img/fig_1.png)
+![logo](img/fig_1.png)
 
 </div>
 
@@ -59,7 +59,7 @@ The IP core is depicted in  while the example loopback design is depicted in **F
 
 <div align="center">
 
-    ![logo](img/fig_2.png)
+![logo](img/fig_2.png)
 
 </div>
 
