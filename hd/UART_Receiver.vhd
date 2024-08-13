@@ -7,7 +7,7 @@ entity UART_Receiver is
     Generic (
 
         C_DATA_BITS    : integer := 8;
-        C_BAUD_TICKS   : integer := 2
+        C_BAUD_TICKS   : integer := 16
 
     );
     

@@ -45,9 +45,9 @@ end UART;
 
 architecture struct of UART is
     
-    constant C_BAUD_TICKS : integer := 2;
+    constant C_BAUD_TICKS : integer := 16;
     constant C_RX_DIV     : integer := C_RX_BAUDRATE * C_BAUD_TICKS;
-    constant C_TX_DIV     : integer := C_TX_BAUDRATE;
+    constant C_TX_DIV     : integer := C_TX_BAUDRATE * C_BAUD_TICKS;
     
     
     component Freq_Divider is
@@ -69,7 +69,7 @@ architecture struct of UART is
     
         Generic (
             C_DATA_BITS  : integer := 8;
-            C_BAUD_TICKS : integer := 2
+            C_BAUD_TICKS : integer := 16
         );
         
         Port (
@@ -86,7 +86,8 @@ architecture struct of UART is
     component UART_Transmitter is
     
         Generic (
-            C_DATA_BITS : integer := 8
+            C_DATA_BITS  : integer := 8;
+            C_BAUD_TICKS : integer := 16
         );
         
         Port (
@@ -163,7 +164,7 @@ RX_Baud_Rate_Generator_Unit:
     ); 
 
 RX_Data_FIFO_Unit:
-    component AXI_Stream_Dual_Clock_Data_FIFO
+    component AXI_Stream_Dual_Clock_FIFO
     generic map (
         C_WIDTH             =>          C_RX_DATA_BITS,
         C_DEPTH             =>          C_RX_FIFO_DEPTH
@@ -181,7 +182,7 @@ RX_Data_FIFO_Unit:
     );
     
 UART_Receiver_Unit:
-    component RX_FSM 
+    component UART_Receiver
     Generic map (
         C_DATA_BITS         =>          C_RX_DATA_BITS,
         C_BAUD_TICKS        =>          C_BAUD_TICKS
@@ -209,7 +210,7 @@ TX_Baud_Rate_Generator_Unit:
     ); 
      
 TX_Data_FIFO_Unit:
-    component AXI_Stream_Dual_Clock_Data_FIFO
+    component AXI_Stream_Dual_Clock_FIFO
     generic map (
         C_WIDTH             =>          C_TX_DATA_BITS,
         C_DEPTH             =>          C_TX_FIFO_DEPTH
@@ -227,7 +228,7 @@ TX_Data_FIFO_Unit:
     );
 
 UART_Transmitter_Unit:
-    component TX_FSM 
+    component UART_Transmitter 
     Generic map (
         C_DATA_BITS         =>          C_TX_DATA_BITS
     )

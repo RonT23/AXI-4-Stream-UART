@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity AXI_4_Stream_UART_Top is
+entity AXI_4_Stream_UART is
     
     Generic (
     
@@ -42,9 +42,9 @@ entity AXI_4_Stream_UART_Top is
         
     );
     
-end AXI_4_Stream_UART_Top;
+end AXI_4_Stream_UART;
 
-architecture struct of AXI_4_Stream_UART_Top is
+architecture struct of AXI_4_Stream_UART is
      
     component UART is
     
@@ -94,7 +94,7 @@ begin
    RX_Reset <= not (M_AXIS_ARESETN);
    TX_Reset <= not (S_AXIS_ARESETN);     
      
-UART_System_Unit:
+UART_Unit:
     component UART
     generic map (
     
