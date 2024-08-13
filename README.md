@@ -30,22 +30,37 @@ This repository contains all components necessary for synthesizing and using thi
  
 **Table 1**  - The generic parameters used to configure the IP core.
 
-| Generic Name        | Description                         | Default Value  |
-|---------------------|-------------------------------------|----------------|
-| `C_RX_BAUDRATE`     | Receiver baud rate value            | 115_200        |
-| `C_RX_CLOCK_FREQ`   | Receiver clock frequency            | 100_000_000    |
-| `C_RX_DATA_BITS`    | Receiver number of data bits        | 8              |
-| `C_RX_FIFO_DEPTH`   | Receiver FIFO buffer depth          | 16             |
-| `C_TX_BAUDRATE`     | Transmitter baud rate value         | 115_200        |
-| `C_TX_CLOCK_FREQ`   | Transmitter clock frequency         | 100_000_000    |
-| `C_TX_DATA_BITS`    | Transmitter number of data bits     | 8              |
-| `C_TX_FIFO_DEPTH`   | Transmitter FIFO buffer depth       | 16             |
+<div align="center">
 
+    | Generic Name        | Description                         | Default Value  |
+    |---------------------|-------------------------------------|----------------|
+    | `C_RX_BAUDRATE`     | Receiver baud rate value            | 115_200        |
+    | `C_RX_CLOCK_FREQ`   | Receiver clock frequency            | 100_000_000    |
+    | `C_RX_DATA_BITS`    | Receiver number of data bits        | 8              |
+    | `C_RX_FIFO_DEPTH`   | Receiver FIFO buffer depth          | 16             |
+    | `C_TX_BAUDRATE`     | Transmitter baud rate value         | 115_200        |
+    | `C_TX_CLOCK_FREQ`   | Transmitter clock frequency         | 100_000_000    |
+    | `C_TX_DATA_BITS`    | Transmitter number of data bits     | 8              |
+    | `C_TX_FIFO_DEPTH`   | Transmitter FIFO buffer depth       | 16             |
 
-The IP core is depicted in **Figure 1** while the example loopback design is depicted in **Figure 2**.
+</div>
 
-![logo](img/fig_1.png)
+The IP core is depicted in  while the example loopback design is depicted in **Figure 2**.
 
-![logo](img/fig_2.png)
+**Figure 1** - The IP core in Vivado Block Design.
+
+<div align="center">
+
+    ![logo](img/fig_1.png)
+
+</div>
+
+**Figure 2** The loopback example block design in Vivado.
+
+<div align="center">
+
+    ![logo](img/fig_2.png)
+
+</div>
 
 For more information, refer to the documentation provided in `./doc` or contact me at `ronaldo.tsela23@gmail.com`.
