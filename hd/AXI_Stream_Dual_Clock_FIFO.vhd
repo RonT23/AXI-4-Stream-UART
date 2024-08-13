@@ -62,7 +62,7 @@ FIFO_Transaction_Counter_Process:
                 
                 if S_AXIS_TVALID = '1' and Full_Reg = '0' then
      
-                   count := count + 1;
+                    count := count + 1;
                                             
                 end if;
                 
@@ -82,20 +82,20 @@ FIFO_Transaction_Counter_Process:
             
                 if M_AXIS_TREADY = '1' and Empty_Reg = '0' then
                     
-                   count := count - 1;
-                                            
+                    count := count - 1;
+                                  
                 end if;
                 
                 if count = 0 then
 
                     Empty_Reg <= '1';
-
+    
                 else
                     
                     Empty_Reg <= '0';
-
+    
                 end if;
-                  
+                
             end if;  
 
         end if;
