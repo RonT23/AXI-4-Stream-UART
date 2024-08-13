@@ -231,28 +231,6 @@ set obj [get_filesets utils_1]
 # Set 'utils_1' fileset properties
 set obj [get_filesets utils_1]
 
-
-# Adding sources referenced in BDs, if not already added
-if { [get_files AXI_Stream_Dual_Clock_FIFO.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/AXI_Stream_Dual_Clock_FIFO.vhd
-}
-if { [get_files Freq_Divider.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/Freq_Divider.vhd
-}
-if { [get_files UART.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/UART.vhd
-}
-if { [get_files UART_Receiver.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/UART_Receiver.vhd
-}
-if { [get_files UART_Transmitter.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/UART_Transmitter.vhd
-}
-if { [get_files AXI_4_Stream_UART_Top.vhd] == "" } {
-  import_files -quiet -fileset sources_1 /home/ronaldo/Desktop/AXI-4-Stream-UART/hd/AXI_4_Stream_UART_Top.vhd
-}
-
-
 # Proc to create BD design_1
 proc cr_bd_design_1 { parentCell } {
 # The design that will be created by this Tcl proc contains the following 
